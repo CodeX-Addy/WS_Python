@@ -1,7 +1,7 @@
 import asyncio
 import websockets
 
-## Function to handle the chat client
+## Function to handle the client chat
 async def chat():
     async with websockets.connect('ws://localhost:12345') as websocket:
         while True:

@@ -1,14 +1,26 @@
+# client.py
 import asyncio
 import websockets
 
-## Function to handle the chat client
-async def chat():
-    async with websockets.connect('ws://localhost:12345') as websocket:
+async def send_and_receive():
+    uri = "ws://localhost:12345"
+    async with websockets.connect(uri) as websocket:
+        name = input("What's your name? ")
+        
+        # Send a message
+        await websocket.send(f"{name}: Hello everyone!")
+        
+        # Receive messages
         while True:
-            message = input("Enter message: ")
-            await websocket.send(message)
-            response = await websocket.recv()
-            print(f"Received: {response}")
+            try:
+                message = await websocket.recv()
+                print(f"< {message}")
+            except websockets.exceptions.ConnectionClosed:
+                print("Connection closed")
+                break
+
+async def main():
+    await send_and_receive()
 
 if __name__ == "__main__":
-    asyncio.run(chat())
+    asyncio.run(main())

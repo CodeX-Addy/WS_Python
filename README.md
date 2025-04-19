@@ -23,10 +23,10 @@ pip install websockets asyncio
 
 ### To run the code, use the following command:
 ```bash
-python -m websockets.server --port 8765 server.py
+python server.py
 ```
 ```bash
-python -m websockets.client --port 8765 client.py
+python client.py
 ```
 
 

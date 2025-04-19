@@ -18,7 +18,7 @@ async def receiver(websocket):
             print("Connection closed")
             break
 
-## Main chat function to handle both sending and receiving
+## Main chat function to handle both sending and receiving messages
 async def chat():
     async with websockets.connect('ws://localhost:12345') as websocket:
         sender_task = asyncio.create_task(sender(websocket))

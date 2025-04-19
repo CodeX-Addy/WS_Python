@@ -2,15 +2,9 @@
 import asyncio
 import websockets
 
-async def send_and_receive():
-    uri = "ws://localhost:12345"
-    async with websockets.connect(uri) as websocket:
-        name = input("What's your name? ")
-        
-        # Send a message
-        await websocket.send(f"{name}: Hello everyone!")
-        
-        # Receive messages
+## Function to handle the chat client
+async def chat():
+    async with websockets.connect('ws://localhost:12345') as websocket:
         while True:
             try:
                 message = await websocket.recv()
@@ -23,4 +17,4 @@ async def main():
     await send_and_receive()
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(chat())

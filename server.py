@@ -9,7 +9,7 @@ async def handle_client(websocket):
     ## Add the new client to the set of connected clients
     connected_clients.add(websocket)
     try:
-        ## Listen for messages from the client
+        ## Listen for messages from the client side
         async for message in websocket:
             print(f"Received message: {message}")
             ## Broadcast the message to all other connected clients

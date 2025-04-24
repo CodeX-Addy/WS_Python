@@ -19,7 +19,6 @@ async def handle_client(websocket):
     except websockets.exceptions.ConnectionClosed:
         pass
     finally:
-        ## Remove the client from the set of connected clients
         connected_clients.remove(websocket)
 
 ## Main function to start the WebSocket server

@@ -8,7 +8,7 @@ async def sender(websocket):
         await websocket.send(message)
         await asyncio.sleep(0.1)
 
-## Function to handle receiving messages
+## Function to handle receiver messages
 async def receiver(websocket):
     while True:
         try:

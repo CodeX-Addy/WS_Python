@@ -25,7 +25,7 @@ async def chat():
         receiver_task = asyncio.create_task(receiver(websocket))
         await asyncio.gather(sender_task, receiver_task)
 
-## Starting the client
+## Starting the client -> main
 if __name__ == "__main__":
     try:
         asyncio.run(chat())

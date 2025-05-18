@@ -1,7 +1,7 @@
 import asyncio
 import websockets
 
-## Function to handle sender message
+## Function to handle sender messages
 async def sender(websocket):
     while True:
         message = input("Enter message: ")

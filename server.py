@@ -6,7 +6,6 @@ connected_clients = set()
 
 ## Function to handle each client connection
 async def handle_client(websocket):
-    ## Add the new client to the set of connected clients
     connected_clients.add(websocket)
     try:
         ## Listen for messages from the client side

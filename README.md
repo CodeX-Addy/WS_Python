@@ -1,7 +1,7 @@
 # Web Sockets in Python
 
-#### Web Sockets are a protocol for full-duplex communication channels over a single TCP connection.They are commonly used in real-time web applications, such as chat applications, online gaming, and live notifications.Web Sockets allow for low-latency communication between the client and server, enabling real-time updates without the need for constant polling.
-### In this example, we will create a simple WebSocket server and client using Python.
+#### Web Sockets are a protocol for full-duplex communication channels over a single TCP connection. They are commonly used in real-time web applications, such as chat applications, online gaming, and live notifications. Web Sockets allow for low-latency communication between the client and server, enabling real-time updates without the need for constant polling.
+### In this example, we will create a simple websocket server and client using Python.
 
 
 #### The server listens for incoming connections and echoes back any messages it receives.
